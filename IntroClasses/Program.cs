@@ -6,20 +6,19 @@ public class Program
     {
         Player hero = new Player();
         hero.Display();
-        // Console.ReadKey(true);
-        string input = Console.ReadLine()!;
-        switch (input)
+        ConsoleKeyInfo input = Console.ReadKey(true);
+        switch (input.Key)
         {
-            case "s":
+            case ConsoleKey.S:
                 hero.Move(0, 1);
                 break;
-            case "w":
+            case ConsoleKey.W:
                 hero.Move(0, -1);
                 break;
-            case "a":
+            case ConsoleKey.A:
                 hero.Move(-1, 0);
                 break;
-            case "d":
+            case ConsoleKey.D:
                 hero.Move(1, 0);
                 break;
         }
